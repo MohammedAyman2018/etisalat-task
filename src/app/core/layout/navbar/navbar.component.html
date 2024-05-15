@@ -1,0 +1,71 @@
+<nav
+  class="navbar bg-dark border-bottom border-body navbar-expand-lg"
+  data-bs-theme="dark"
+>
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img
+        width="30"
+        height="24"
+        src="assets/images/logo-homepage.png"
+        alt="e& logo"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li *ngFor="let link of navLinks" class="nav-item">
+          <a class="nav-link" [href]="link.url">{{ link.text }}</a>
+        </li>
+      </ul>
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-between gap-3"
+      >
+        <button class="btn icon notification">
+          <i class="bi bi-bell"></i>
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+          >
+            3
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </button>
+
+        <div class="text-white dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            SREEKUMAR
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+
+        <div class="vertical-line"></div>
+
+        <button class="btn btn-dark">العربية</button>
+      </div>
+    </div>
+  </div>
+</nav>

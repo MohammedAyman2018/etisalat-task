@@ -1,0 +1,24 @@
+.notification,
+.notification:focus {
+  position: relative;
+  background-color: rgb(46, 46, 46);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-toggle::after {
+  display: none;
+
+}
+
+.vertical-line {
+  width: 2px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.75);
+}

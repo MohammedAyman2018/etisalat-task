@@ -1,0 +1,22 @@
+<footer class="bg-dark text-secondary py-5">
+  <div class="container">
+    <div class="row d-flex flex-wrap align-items-center">
+      <div class="col-lg-10">
+        <div class="d-flex flex-wrap">
+          <a
+            *ngFor="let link of footerLinks; index as i"
+            class="footer-link px-2"
+            [class.border-end]="i !== footerLinks.length - 1"
+            [href]="link.url"
+          >
+            {{ link.text }}
+          </a>
+        </div>
+        <p class="text-secondary">&copy; 2024 Etisalat. All Rights Reserved.</p>
+      </div>
+      <div class="col-lg-2">
+        <img width="100" src="assets/images/logo-homepage.png" alt="e& logo" />
+      </div>
+    </div>
+  </div>
+</footer>

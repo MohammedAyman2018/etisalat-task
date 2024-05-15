@@ -1,0 +1,56 @@
+<main class="container my-3 text-center">
+  <h1 class="fw-bold">Hello SREEKUMAR ETISALAT</h1>
+  <p class="text-secondary">UAT TEST EAGLE</p>
+
+  <section class="banner">
+    <div class="banner_search-input">
+      <div class="inpt-wrapper">
+        <input placeholder="Search account no" type="text" />
+        <i class="bi bi-search text-white" style="font-size: 25px"></i>
+      </div>
+    </div>
+
+    <div class="banner_status p-2">OVERVIEW</div>
+
+    <div class="banner_info">
+      <h2 class="fw-bold">
+        <div
+          *ngIf="isLoading"
+          class="spinner-grow spinner-grow-sm"
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        {{ stats?.total_accounts }}
+      </h2>
+      <p>Accounts in your organization</p>
+      <a class="fw-bold text-white" href="#"> View All Accounts </a>
+    </div>
+  </section>
+  <section
+    class="bg-white p-2 shadow-sm d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3"
+  >
+    <div
+      *ngFor="let account of accountsList; index as i"
+      class="d-flex justify-content-center align-items-center gap-2 p-2"
+      [class.border-end]="i !== accountsList.length - 1"
+    >
+      {{ account.label }}
+      <span [class]="'badge text-bg-' + account.tag">
+        <div
+          *ngIf="isLoading"
+          class="spinner-grow spinner-grow-sm"
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        {{ account.count }}
+      </span>
+    </div>
+  </section>
+
+  <a class="d-inline-block my-3 text-secondary text-decoration-none" href="">
+    <i class="bi bi-chevron-left"></i>
+    <span class="ms-2">Back to old website</span>
+  </a>
+</main>
